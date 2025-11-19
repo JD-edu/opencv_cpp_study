@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 1101_find_draw_contour.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 1101_find_draw_contour.cpp -o 1101_find_draw_contour -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -65,6 +65,7 @@ int main() {
 
         // 결과 표시
         cv::imshow("my win", contourFrame);
+        cv::imshow("threshold", threshFrame);
 
         // 종료 키 체크 ('q' 키로 종료)
         if (cv::waitKey(1) == 'q') {

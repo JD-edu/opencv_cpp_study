@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 601_color_space_gray.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
+g++ 601_color_space_gray.cpp -o 601_color_space_gray -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
 */
 
 #include <opencv2/opencv.hpp>

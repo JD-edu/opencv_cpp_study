@@ -24,7 +24,7 @@ SOFTWARE.
 
 
 /*
-g++ 1105_contour_bounding.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 1105_contour_bounding.cpp -o 1105_contour_bounding -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>

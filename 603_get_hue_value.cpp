@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 603_get_hue_value.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
+g++ 603_get_hue_value.cpp -o 603_get_hue_value -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
 */
 
 #include <opencv2/opencv.hpp>
@@ -34,7 +34,7 @@ int main() {
     int hue = 0;
 
     // BGR 색상 정의
-    cv::Mat bgrColor(1, 1, CV_8UC3, cv::Scalar(85, 109, 215)); // BGR: (85, 109, 215)
+    cv::Mat bgrColor(300, 300, CV_8UC3, cv::Scalar(85, 109, 215)); // BGR: (85, 109, 215)
 
     // BGR을 HSV로 변환
     cv::Mat hsvColor;
@@ -60,6 +60,10 @@ int main() {
     std::cout << "[" << upperHue << ", 255, 255]" << std::endl;
 
     std::cout << "Hue: " << hue << std::endl;
+
+    cv::imshow("hsv", hsvColor);
+    cv::imshow("bgr", bgrColor);
+    cv::waitKey(0);
 
     return 0;
 }

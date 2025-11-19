@@ -21,6 +21,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
+
+/*
+You can build this code using 2 ways.
+
+Method 1: simply using command line 
+g++ 302_draw_rect.cpp -o 302_draw_rect -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+
+Method 2: using cmake 
+refer to cmake_build.md 
+*/
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 

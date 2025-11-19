@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 1105_contour_bounding.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 901_erosion_image.cpp -o 901_erosion_image -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>

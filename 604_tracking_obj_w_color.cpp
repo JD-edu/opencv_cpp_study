@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 604_tracking_obj_w_color.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
+g++ 604_tracking_obj_w_color.cpp -o 604_tracking_obj_w_color -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>

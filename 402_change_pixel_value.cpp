@@ -24,7 +24,7 @@ SOFTWARE.
 
 /*
 To build this code
-$ g++ 402_change_pixel_value.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
+g++ 402_change_pixel_value.cpp -o 402_change_pixel_value -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
 */
 
 #include <opencv2/opencv.hpp>

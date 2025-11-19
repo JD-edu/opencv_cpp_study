@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 906_image_blur.cpp  -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 906_image_blur.cpp  -o 906_image_blur -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 
 #include <opencv2/opencv.hpp>

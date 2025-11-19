@@ -22,6 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
 
+/*
+g++ 805_affine_transform.cpp -o 805_affine_transform -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+*/
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 

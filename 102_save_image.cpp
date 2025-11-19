@@ -21,19 +21,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
+
+/*
+You can build this code using 2 ways.
+
+Method 1: simply using command line 
+g++ 102_save_image.cpp -o 102_save_image -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+
+Method 2: using cmake 
+refer to cmake_build.md 
+*/
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
 int main() {
     // 이미지 읽기 (컬러 모드)
-    cv::Mat img = cv::imread("lena.jpg", cv::IMREAD_COLOR);
+    cv::Mat img = cv::imread("./resource/lena.jpg", cv::IMREAD_COLOR);
 
     // 이미지 로드 확인
     if (img.empty()) {
         std::cerr << "Error: Unable to load image!" << std::endl;
         return 1; // 프로그램 종료
     }
-
+    
     // 이미지 표시
     cv::imshow("Image Window", img);
 

@@ -23,57 +23,55 @@ SOFTWARE.
 */
 
 /*
-g++ 1103_contour_area.cpp -o 1103_contour_area -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 905_image_filter.cpp  -o 905_image_filter -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
+// 트랙바 콜백 함수
+void onTrackbar(int, void*) {
+    // 콜백 함수는 트랙바 이벤트에서 호출되지만, 실제 처리는 메인 루프에서 수행됩니다.
+}
+
 int main() {
     // 이미지 읽기
-    cv::Mat img = cv::imread("./resource/image_single_obj.jpg");
+    cv::Mat img = cv::imread("./resource/lena.jpg");
     if (img.empty()) {
         std::cerr << "Error: Unable to load image!" << std::endl;
         return 1;
     }
 
-    // 그레이스케일 변환
-    cv::Mat imgray;
-    cv::cvtColor(img, imgray, cv::COLOR_BGR2GRAY);
+    // 윈도우 생성
+    cv::namedWindow("image", cv::WINDOW_AUTOSIZE);
 
-    // 이진화 (Thresholding)
-    cv::Mat thresh;
-    cv::threshold(imgray, thresh, 127, 255, 0);
-    cv::imshow("thresh", thresh);
+    // 트랙바 생성 (초기값 1, 최대값 20)
+    int k = 1;
+    cv::createTrackbar("K", "image", &k, 20, onTrackbar);
 
-    // 윤곽선 찾기
-    std::vector<std::vector<cv::Point>> contours;
-    std::vector<cv::Vec4i> hierarchy;
-    cv::findContours(thresh, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+    while (true) {
+        // 종료 조건 (ESC 키)
+        if (cv::waitKey(1) == 27) {
+            break;
+        }
 
-    // 윤곽선 그리기 (첫 번째 윤곽선)
-    cv::drawContours(img, contours, 0, cv::Scalar(0, 0, 255), 2);
+        // 트랙바 값 가져오기
+        k = cv::getTrackbarPos("K", "image");
 
-    // 첫 번째 윤곽선의 Moments 계산
-    if (!contours.empty()) {
-        cv::Moments M = cv::moments(contours[0]);
+        // 값이 0이면 1로 치환
+        if (k == 0) {
+            k = 1;
+        }
 
-        // 모멘트 값 m00 및 면적 계산
-        double m00 = M.m00;
-        double area = cv::contourArea(contours[0]);
+        // (k, k) 크기의 커널 생성 및 필터 적용
+        cv::Mat kernel = cv::Mat::ones(k, k, CV_32F) / (k * 2);
+        cv::Mat dst;
+        cv::filter2D(img, dst, -1, kernel);
 
-        // 결과 출력
-        std::cout << "m00 (Moment m00): " << m00 << std::endl;
-        std::cout << "Area: " << area << std::endl;
-    }
-    else {
-        std::cerr << "No contours found!" << std::endl;
+        // 결과 이미지 표시
+        cv::imshow("image", dst);
     }
 
-    // 결과 이미지 표시
-    cv::imshow("win", img);
-
-    // 키 입력 대기
-    cv::waitKey(0);
+    // 모든 창 닫기
     cv::destroyAllWindows();
 
     return 0;

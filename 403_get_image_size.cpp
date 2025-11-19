@@ -22,6 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
 
+/*
+To build this code
+g++ 403_get_image_size.cpp -o 403_get_image_size -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
+*/
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 

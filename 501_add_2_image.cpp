@@ -24,7 +24,7 @@ SOFTWARE.
 
 /*
 To build this code 
-g++ 501_add_2_image.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
+g++ 501_add_2_image.cpp -o 501_add_2_image -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
 
 */
 

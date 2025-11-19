@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 1102_contour_center.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 1102_contour_center.cpp -o 1102_contour_center -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 
 #include <opencv2/opencv.hpp>
@@ -70,7 +70,7 @@ int main() {
         std::cout << "Centroid: (" << cx << ", " << cy << ")" << std::endl;
 
         // 중심 좌표 표시
-        cv::circle(img, cv::Point(cx, cy), 3, cv::Scalar(255, 0, 0), 2);
+        cv::circle(img, cv::Point(cx, cy), 3, cv::Scalar(255, 0, 0), 4);
     }
     else {
         std::cerr << "No contours found!" << std::endl;
@@ -78,6 +78,8 @@ int main() {
 
     // 결과 표시
     cv::imshow("win", img);
+    cv::imshow("thresold", thresh);
+
 
     // 키 입력 대기
     cv::waitKey(0);

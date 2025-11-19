@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 502_bit_image_operation.cpp -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
+g++ 502_bit_image_operation.cpp -o 502_bit_image_operation -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs
 */
 
 #include <opencv2/opencv.hpp>

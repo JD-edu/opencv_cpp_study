@@ -21,12 +21,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
-#include <opencv2\opencv.hpp>
+/*
+You can build this code using 2 ways.
+
+Method 1: simply using command line 
+g++ 101_read_image.cpp -o 101_read_image -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+
+Method 2: using cmake 
+refer to cmake_build.md 
+*/
+#include <opencv2/opencv.hpp>
 
 using namespace cv;
 
-void main() {
-	Mat Image = imread("lena.jpg", IMREAD_COLOR);
+int main() {
+	Mat Image = imread("./resource/lena.jpg", IMREAD_COLOR);
 	namedWindow("display", WINDOW_AUTOSIZE);
 	imshow("display", Image);
 	imwrite("lena_new.jpg", Image);

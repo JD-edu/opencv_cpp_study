@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 903_morph_ex_image.cpp  -o uga -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 903_morph_ex_image.cpp  -o 903_morph_ex_image -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 #include <opencv2/opencv.hpp>
 #include <iostream>

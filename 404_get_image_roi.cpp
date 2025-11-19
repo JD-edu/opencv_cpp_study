@@ -22,6 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN TH
 SOFTWARE.
 */
 
+/*
+To build this code
+g++ 404_get_image_roi.cpp -o 404_get_image_roi -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodec
+*/
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
