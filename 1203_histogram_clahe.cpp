@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 /*
-g++ 1203_histogram_clahe.cpp  -o 1201_histogram_clahe -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ 1203_histogram_clahe.cpp  -o 1203_histogram_clahe -I/usr/local/include/opencv4 -L/usr/local/lib -lopencv_core -lopencv_videoio -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
 */
 
 #include <opencv2/opencv.hpp>
